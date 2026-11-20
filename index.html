@@ -728,7 +728,7 @@ header.hide{transform:translateY(-100%)}
       <div class="plan">
         <h3>Essenziale</h3>
         <p class="muted">Per farti trovare online con una presenza curata.</p>
-        <div class="price"><small>da</small>€590<sub>+ IVA</sub></div>
+        <div class="price"><small>da</small>€570<sub>+ IVA</sub></div>
         <ul>
           <li>Sito di una pagina, ottimizzato per smartphone</li>
           <li>Pulsanti diretti per chiamata e WhatsApp</li>
@@ -741,7 +741,7 @@ header.hide{transform:translateY(-100%)}
         <span class="badge">IL PIÙ SCELTO</span>
         <h3>Professionale</h3>
         <p class="muted">Il sito completo per presentare al meglio la tua attività.</p>
-        <div class="price"><small>da</small>€990<sub>+ IVA</sub></div>
+        <div class="price"><small>da</small>€970<sub>+ IVA</sub></div>
         <ul>
           <li>Fino a 5 pagine su misura</li>
           <li>Aiuto nella scrittura dei testi</li>
@@ -754,7 +754,7 @@ header.hide{transform:translateY(-100%)}
       <div class="plan">
         <h3>Crescita</h3>
         <p class="muted">Per chi vuole un flusso costante di richieste.</p>
-        <div class="price"><small>da</small>€1.590<sub>+ IVA</sub></div>
+        <div class="price"><small>da</small>€1.570<sub>+ IVA</sub></div>
         <ul>
           <li>Tutto il pacchetto Professionale</li>
           <li>Pagine dedicate a ogni servizio</li>
@@ -877,6 +877,7 @@ header.hide{transform:translateY(-100%)}
     <form id="quote-form" novalidate>
       <input type="hidden" name="access_key" value="959aa0a3-36db-46e7-8a13-5288bb89878b">
       <input type="hidden" name="subject" value="Nuova richiesta dal sito BeeStudio">
+      <input type="hidden" name="from_name" value="Sito BeeStudio">
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <fieldset>
         <legend>Di cosa hai bisogno?</legend>
@@ -1073,7 +1074,23 @@ form.addEventListener('submit', async (e) => {
     msg.textContent = 'Inserisci nome, un indirizzo email valido e accetta l\'informativa privacy.';
     msg.classList.add('err'); return;
   }
-  const data = Object.fromEntries(new FormData(form));
+  const raw = Object.fromEntries(new FormData(form));
+  const data = {
+    access_key: raw.access_key,
+    botcheck: raw.botcheck || '',
+    from_name: 'Sito BeeStudio',
+    subject: '🐝 Nuova richiesta: ' + (raw.nome || 'contatto') + ' · ' + raw.attivita,
+    replyto: raw.email,
+    'Nome e cognome': raw.nome,
+    'Email': raw.email,
+    'Telefono / WhatsApp': raw.telefono || 'Non indicato',
+    'Tipo di attività': raw.attivita,
+    'Di cosa ha bisogno': raw.servizio,
+    'Budget indicativo': raw.budget,
+    'Messaggio': raw.messaggio || 'Nessun messaggio',
+    'Consenso privacy': raw.privacy ? 'Accettato' : 'Non accettato',
+    'Inviato il': new Date().toLocaleString('it-IT',{timeZone:'Europe/Rome',dateStyle:'full',timeStyle:'short'})
+  };
   if (data.access_key.startsWith('INSERIRE')) {
     msg.textContent = 'Anteprima: il modulo sarà attivo dopo il collegamento a Web3Forms.';
     msg.classList.add('ok'); return;
