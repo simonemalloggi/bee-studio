@@ -1,0 +1,1 @@
+import{t as e}from"./orari.Z1nIr-O_.js";e(),setInterval(e,6e4);
