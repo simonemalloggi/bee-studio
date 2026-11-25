@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Fisioterapico Altemura</title>
+<meta name="description" content="Studio fisioterapico a Marina di Massa. RPG, manipolazioni vertebrali, Tecar, laser, kinesiotaping, linfodrenaggio Vodder, riabilitazione domiciliare e corsi di gruppo.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE clinico ma caldo, sicuro, professionale: poco colore, molto respiro
+   IDEA una tavola anatomica moderna: la colonna vertebrale come filo conduttore
+   PICTURE colonna vertebrale illustrata su campo verde scuro, con i punti di trattamento
+   COLOUR verde profondo del logo come campo, bianco, verde vivo come accento, nero inchiostro
+   TYPE Outfit per i titoli, Inter per il testo
+   LAYOUT laptop: titolo e contatti a sinistra, colonna a destra; telefono: titolo, figura, pulsanti */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0b1210);--ink:light-dark(#0f1a15,#e9f1ec);--soft:light-dark(#4a5a52,#a9bab1);--deep:#0d3b2c;--deep2:#0a2f23;--green:#3a9e6a;--lime:#c8f169;--line:light-dark(#e3ebe6,#1f2c27);--card:light-dark(#f4f8f5,#111b17)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Outfit,system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(36px,5.2vw,60px);font-weight:800}
+h2{font-size:clamp(30px,3.6vw,44px);font-weight:700}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(48px,6vw,96px);padding-inline:max(5vw,16px)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font:600 16px Inter,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.b-lime{background:var(--lime);color:#0d2a1f}
+.b-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.b-green{background:var(--green);color:#fff}
+.lead{font-size:18px;color:var(--soft);max-width:60ch}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:var(--deep);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,16px);max-width:1240px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:800 18px Outfit,sans-serif;letter-spacing:-.01em;display:block;line-height:1.1}
+.logo small{font-size:13px;opacity:.75}
+.logo img{height:52px;width:auto;flex:none}
+.links{display:flex;gap:26px;font-weight:500;font-size:15px}
+.links a{text-decoration:none;opacity:.85}
+.links a:hover{opacity:1}
+.nav .btn{min-height:42px;padding:0 18px;font-size:15px}
+/* hero */
+.hero{background:var(--deep);color:#fff;padding-top:clamp(32px,4vw,56px);padding-bottom:0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:end}
+.hero-txt{padding-bottom:clamp(40px,6vw,88px)}
+.hero h1 span{color:var(--lime)}
+.hero p.lead{color:#bcd6c8;margin:22px 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
+.facts b{font:700 28px Outfit,sans-serif;display:block;color:#fff;white-space:nowrap}
+.facts span{font-size:14px;color:#a9c7b8}
+.fig{position:relative;height:clamp(420px,46vw,600px)}
+.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.chip{position:absolute;background:#fff;color:#0f1a15;border-radius:14px;padding:10px 14px;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);display:flex;gap:10px;align-items:center}
+.chip b{font:700 15px Outfit,sans-serif;display:block}
+.chip i{width:10px;height:10px;border-radius:50%;background:var(--green);flex:none;font-style:normal}
+.c1{top:14%;right:2%}
+.c2{bottom:18%;left:0}
+/* trust */
+.trust{border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.trust div{display:flex;gap:14px;align-items:flex-start}
+.trust svg{flex:none;color:var(--green)}
+.trust b{display:block;font:600 16px Outfit,sans-serif}
+.trust span{font-size:14px;color:var(--soft)}
+/* servizi */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head .lead{max-width:46ch}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:border-color .2s,transform .2s}
+.svc img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.svc .bd{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1;position:relative}
+.svc .ico{position:absolute;top:-26px;right:18px;background:var(--green);color:#fff;border:4px solid var(--card)}
+.svc:hover{border-color:var(--green);transform:translateY(-3px)}
+.ico{width:48px;height:48px;border-radius:14px;background:color-mix(in srgb,var(--green) 14%,transparent);color:var(--green);display:grid;place-items:center}
+.svc p{font-size:15px;color:var(--soft);flex:1}
+.more{font-weight:600;font-size:14px;color:var(--green)}
+/* chi sono */
+.about{background:var(--card)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,72px);align-items:center}
+.ph{border-radius:24px;background:linear-gradient(160deg,var(--deep),#145a41);aspect-ratio:4/5;position:relative;overflow:hidden;display:grid;place-items:center;color:#fff}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.ph .tag{position:absolute;left:16px;bottom:16px;right:16px;background:rgba(255,255,255,.95);color:#0f1a15;border-radius:14px;padding:12px 16px}
+.ph .tag b{font:700 17px Outfit,sans-serif;display:block}
+.ph .tag span{font-size:14px;color:#4a5a52}
+.about h2{margin-bottom:18px}
+.about p+p{margin-top:14px}
+.tl{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.tl b{font:700 18px Outfit,sans-serif;color:var(--green)}
+/* studio */
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:14px}
+.gal figure{margin:0;border-radius:18px;position:relative;overflow:hidden;background:var(--card)}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);color:#0f1a15;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.note{font-size:13px;color:var(--soft);margin-top:14px}
+/* corsi */
+.courses{background:var(--deep);color:#fff}
+.courses .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.courses .lead{color:#bcd6c8;margin-top:16px}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 18px;font-weight:500}
+.courses .btn{margin-top:24px}
+/* contatti */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,64px)}
+.info{display:grid;gap:14px;margin-top:28px}
+.info a,.info div{display:flex;gap:14px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:16px;text-decoration:none;background:var(--card)}
+.info svg{color:var(--green);flex:none}
+.info b{display:block;font:600 16px Outfit,sans-serif}
+.info span{font-size:14px;color:var(--soft)}
+.map{margin-top:14px;border-radius:16px;border:1px dashed var(--line);padding:22px;text-align:center;font-size:14px;color:var(--soft);background:var(--card)}
+.map button{margin-top:10px}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,3vw,36px);display:grid;gap:16px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+label{font-size:14px;font-weight:500;display:grid;gap:6px}
+input,textarea{font:16px Inter,sans-serif;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+input:focus,textarea:focus{border-color:var(--green)}
+textarea{min-height:120px;resize:vertical}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--soft)}
+.chk input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--green)}
+#ok{display:none;padding:14px;border-radius:12px;background:color-mix(in srgb,var(--green) 15%,transparent);font-size:15px}
+/* footer */
+footer{background:var(--deep2);color:#a9c7b8;font-size:14px}
+footer .wrap{display:flex;gap:16px;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+footer a{color:#fff;text-decoration:none}
+.fl{display:flex;gap:20px;flex-wrap:wrap}
+.wa{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.pulse{animation:p 2.4s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes p{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:.9;transform:scale(1.25)}}
+@media(prefers-reduced-motion:reduce){.pulse{animation:none}.btn,.svc{transition:none}html{scroll-behavior:auto}}
+@media(max-width:1000px){.links{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ph{aspect-ratio:4/5}
+@media(max-width:760px){.hero .wrap,.about .wrap,.courses .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}.hero-txt{padding-bottom:0}.fig{height:420px}.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.gal .t{grid-row:span 1}}
+@media(max-width:600px){.grid,.trust .wrap,.row{grid-template-columns:minmax(0,1fr)}.facts b{font-size:22px}.nav .btn span{display:none}.c1{right:0;top:6%}.c2{bottom:10%}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top" aria-label="Studio Fisioterapico Altemura, home"><img src="img/logo-light.png" alt="Logo AL fisioterapista" width="58" height="52"><span><b>Studio Fisioterapico</b><small>Leonardo Altemura</small></span></a>
+    <div class="links"><a href="#servizi">Servizi</a><a href="#chi-sono">Chi sono</a><a href="#studio">Lo studio</a><a href="#corsi">Corsi</a><a href="#contatti">Contatti</a></div>
+    <a class="btn b-lime" href="https://wa.me/393393071026"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.1 1.3Z"/></svg><span>Prenota su WhatsApp</span></a>
+  </nav>
+</header>
+
+<section class="band hero" id="top">
+  <div class="wrap">
+    <div class="hero-txt">
+      <h1>Torna a muoverti <span>senza dolore</span>, con un percorso su misura.</h1>
+      <p class="lead">Fisioterapia, riabilitazione ortopedica e neurologica a Marina di Massa. Ogni trattamento parte da una valutazione individuale e da un programma pensato per te.</p>
+      <div class="cta">
+        <a class="btn b-lime" href="https://wa.me/393393071026">Prenota una visita</a>
+        <a class="btn b-ghost" href="#servizi">Scopri i trattamenti</a>
+      </div>
+      <div class="facts">
+        <div><b>Dal 2005</b><span>esperienza clinica</span></div>
+        <div><b>8 aree</b><span>di trattamento</span></div>
+        <div><b>A domicilio</b><span>quando serve</span></div>
+      </div>
+    </div>
+    <div class="fig" aria-hidden="true">
+      <svg id="spine" viewBox="0 0 500 600" preserveAspectRatio="xMidYMax meet"></svg>
+      <div class="chip c1"><i></i><div><b>Cervicale</b>Manipolazioni e terapia manuale</div></div>
+      <div class="chip c2"><i></i><div><b>Lombare</b>RPG e rieducazione posturale</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band trust">
+  <div class="wrap">
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><p><b>Laurea all'Università di Pisa</b><span>Fisioterapista abilitato</span></p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg><p><b>Ex Fondazione Don Gnocchi</b><span>Esperienza in riabilitazione</span></p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><p><b>Lunedì a venerdì</b><span>dalle 15:00 alle 20:00</span></p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><p><b>Marina di Massa</b><span>Via Montegrappa</span></p></div>
+  </div>
+</section>
+
+<section class="band" id="servizi">
+  <div class="wrap">
+    <div class="head">
+      <h2>Trattamenti e servizi</h2>
+      <p class="lead">Tecniche manuali, terapie fisiche strumentali ed esercizio terapeutico, combinati in base alla tua situazione.</p>
+    </div>
+    <div class="grid" id="svc"></div>
+  </div>
+</section>
+
+<section class="band about" id="chi-sono">
+  <div class="wrap">
+    <div class="ph"><img src="img/leonardo.webp" alt="Leonardo Altemura, fisioterapista, nel suo studio" width="825" height="1100"><div class="tag"><b>Leonardo Altemura</b><span>Fisioterapista, titolare dello studio</span></div></div>
+    <div>
+      <h2>Un fisioterapista che ti segue dall'inizio alla fine</h2>
+      <p class="lead">Mi occupo di riabilitazione ortopedica e neurologica, con una rieducazione motoria costruita sulla persona e non sul protocollo.</p>
+      <p>Dopo la laurea all'Università di Pisa ho lavorato alla Fondazione Don Gnocchi di Massa. Nel 2011 ho aperto il mio studio a Marina di Massa, dove oggi seguo pazienti di ogni età, dagli sportivi agli anziani.</p>
+      <ul class="tl">
+        <li><b>2005</b><span>Inizio dell'attività clinica come fisioterapista</span></li>
+        <li><b>2011</b><span>Apertura dello studio a Marina di Massa</span></li>
+        <li><b>Oggi</b><span>Trattamenti in studio, a domicilio e corsi di gruppo</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="studio">
+  <div class="wrap">
+    <div class="head"><h2>Lo studio</h2><p class="lead">Ambienti luminosi, attrezzature professionali e una sala dedicata all'esercizio.</p></div>
+    <div class="gal"><figure class="w t"><img src="img/gal-sala.webp" alt="Sala trattamenti" loading="lazy"><figcaption>Sala trattamenti</figcaption></figure><figure class=""><img src="img/gal-tecar.webp" alt="Tecarterapia Her 150" loading="lazy"><figcaption>Tecarterapia Her 150</figcaption></figure><figure class=""><img src="img/gal-attesa.webp" alt="Sala d'attesa" loading="lazy"><figcaption>Sala d'attesa</figcaption></figure><figure class="w"><img src="img/gal-palestra.webp" alt="Area esercizio terapeutico" loading="lazy"><figcaption>Area esercizio terapeutico</figcaption></figure><figure class=""><img src="img/gal-spalliera.webp" alt="Spalliera e attrezzi" loading="lazy"><figcaption>Spalliera e attrezzi</figcaption></figure><figure class=""><img src="img/gal-ingresso.webp" alt="Ingresso" loading="lazy"><figcaption>Ingresso</figcaption></figure><figure class="w"><img src="img/gal-corsi.webp" alt="Sala corsi di gruppo" loading="lazy"><figcaption>Sala corsi di gruppo</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="band courses" id="corsi">
+  <div class="wrap">
+    <div>
+      <h2>Corsi di gruppo per adulti e terza età</h2>
+      <p class="lead">Piccoli gruppi seguiti da un professionista, per mantenere mobilità, forza ed equilibrio nel tempo.</p>
+      <a class="btn b-lime" href="#contatti">Chiedi informazioni</a>
+    </div>
+    <div class="pills"><span>Ginnastica dolce</span><span>Ginnastica posturale</span><span>Yoga pilates</span><span>Tonificazione muscolare</span></div>
+  </div>
+</section>
+
+<section class="band contact" id="contatti">
+  <div class="wrap">
+    <div>
+      <h2>Prenota o chiedi informazioni</h2>
+      <p class="lead" style="margin-top:14px">Il modo più rapido è WhatsApp. Rispondo personalmente.</p>
+      <div class="info">
+        <a href="https://wa.me/393393071026"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12Z"/></svg><p><b>WhatsApp</b><span>339 307 1026</span></p></a>
+        <a href="tel:+393393071026"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><p><b>Telefono</b><span>339 307 1026</span></p></a>
+        <a href="mailto:leonardoaltemura@msn.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><p><b>Email</b><span>leonardoaltemura@msn.com</span></p></a>
+        <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><p><b>Via Montegrappa, 54100 Marina di Massa (MS)</b><span>Lunedì a venerdì, 15:00 alle 20:00</span></p></div>
+      </div>
+      <div class="map">La mappa Google si carica solo dopo il consenso ai cookie.<br><button class="btn b-green" type="button" id="mapbtn">Mostra la mappa</button></div>
+    </div>
+    <form id="f" action="https://api.web3forms.com/submit" method="POST">
+      <h3>Scrivimi un messaggio</h3>
+      <div class="row">
+        <label for="nome">Nome *<input id="nome" name="nome" required autocomplete="given-name"></label>
+        <label for="cognome">Cognome<input id="cognome" name="cognome" autocomplete="family-name"></label>
+      </div>
+      <div class="row">
+        <label for="tel">Telefono *<input id="tel" name="telefono" type="tel" required autocomplete="tel"></label>
+        <label for="email">Email *<input id="email" name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <label for="msg">Messaggio<textarea id="msg" name="messaggio" placeholder="Descrivi brevemente il motivo della richiesta"></textarea></label>
+      <label class="chk" for="privacy"><input id="privacy" type="checkbox" required><span>Ho letto l'informativa privacy e acconsento al trattamento dei dati per essere ricontattato. *</span></label>
+      <button class="btn b-green" type="submit" style="justify-self:start">Invia richiesta</button>
+      <p id="ok">Anteprima: l'invio è disattivato. Nel sito definitivo il messaggio arriverà via email tramite Web3Forms.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="band" style="padding-block:32px">
+  <div class="wrap">
+    <img src="img/logo-light.png" alt="" width="44" height="40" style="height:40px;width:auto"><span>© 2026 Studio Fisioterapico Altemura Leonardo · Marina di Massa · Sito realizzato da <a href="https://bee-studio.it">BeeStudio</a></span>
+    <div class="fl"><a href="#">Privacy policy</a><a href="#">Cookie policy</a><a href="#contatti">Contatti</a></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/393393071026" aria-label="Scrivi su WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.1 1.3Z"/></svg></a>
+
+<script>
+{
+const ic={
+ rpg:'<path d="M12 3v18M8 7h8M7 12h10M8 17h8"/>',
+ man:'<path d="M7 11V6a2 2 0 0 1 4 0v5M11 10V5a2 2 0 0 1 4 0v6M15 10a2 2 0 0 1 4 0v3a8 8 0 0 1-8 8 6 6 0 0 1-6-6v-3a2 2 0 0 1 4 0"/>',
+ ter:'<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
+ tape:'<path d="M4 18 18 4M8 20 20 8"/><circle cx="6" cy="6" r="2"/>',
+ trig:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/>',
+ lin:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/>',
+ dom:'<path d="M3 11 12 4l9 7M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',
+ grp:'<circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.5 1.3-5 4-5s4 2.5 4 5"/>'
+};
+const svc=[
+ ['rpg','svc-rpg','RPG Rieducazione Posturale Globale','Lavoro manuale su catene muscolari e postura per sintomi neuro muscolo scheletrici.'],
+ ['man','svc-manipolazioni','Manipolazioni vertebrali','Tecniche rapide e precise per sbloccare le articolazioni in caso di lombalgia, cervicalgia e rigidità.'],
+ ['ter','svc-terapie','Terapie fisiche','Laser ad alta potenza, Tecar, ultrasuoni, magnetoterapia, pressoterapia ed elettroterapia antalgica.'],
+ ['tape','svc-kinesio','Kinesiotaping','Bendaggio elastico per ridurre il dolore, favorire la circolazione e sostenere la postura.'],
+ ['trig','svc-trigger','Terapia manuale trigger point','Disattivazione dei punti di tensione muscolare che causano dolore localizzato e riferito.'],
+ ['lin','svc-linfo','Linfodrenaggio Vodder','Linfodrenaggio manuale per linfedema primario e secondario.'],
+ ['dom','svc-domicilio','Riabilitazione domiciliare','Fisioterapia a casa tua dopo un intervento, in caso di mobilità ridotta o patologie croniche.'],
+ ['grp','svc-corsi','Corsi di gruppo','Ginnastica dolce, posturale, yoga pilates e tonificazione per adulti e terza età.']
+];
+document.getElementById('svc').innerHTML=svc.map(s=>`<a class="svc" href="#contatti"><img src="img/${s[1]}.webp" alt="${s[2]}" loading="lazy" width="1100" height="825"><div class="bd"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[s[0]]}</svg></span><h3>${s[2]}</h3><p>${s[3]}</p><span class="more">Scopri di più</span></div></a>`).join('');
+
+const s=document.getElementById('spine');
+let g='<defs><linearGradient id="v" x1="0" x2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfe8da"/></linearGradient><radialGradient id="h" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#c8f169" stop-opacity=".9"/><stop offset="1" stop-color="#c8f169" stop-opacity="0"/></radialGradient></defs>';
+[260,200,140].forEach((r,i)=>g+=`<circle cx="260" cy="330" r="${r}" fill="none" stroke="#2fae66" stroke-opacity="${.18+i*.1}" stroke-width="1.5"/>`);
+g+='<ellipse cx="260" cy="600" rx="240" ry="40" fill="#0a2f23"/>';
+g+='<path d="M180 90 C170 30 350 30 340 90 C335 125 300 140 260 140 C220 140 185 125 180 90Z" fill="#14563f"/>';
+const pts=[];
+for(let i=0;i<24;i++){const t=i/23;const y=150+t*360;const x=260+Math.sin(t*Math.PI*2+0.4)*26;const w=i<7?34+i*2:i<19?48+(i-7)*1.6:70+(i-19)*4;const h=i<7?10:i<19?12:15;pts.push([x,y,w,h]);}
+g+=`<path d="M${pts.map(p=>p[0]+' '+p[1]).join(' L')}" stroke="#0a2f23" stroke-width="20" fill="none" stroke-linecap="round"/>`;
+pts.forEach(([x,y,w,h],i)=>{g+=`<rect x="${x-w/2-8}" y="${y-h/2}" width="${w+16}" height="4" rx="2" fill="#2fae66" opacity=".55"/><rect x="${x-w/2}" y="${y-h/2+1}" width="${w}" height="${h}" rx="${h/2}" fill="url(#v)"/><rect x="${x-w/2}" y="${y+h/2-3}" width="${w}" height="3" rx="1.5" fill="#000" opacity=".12"/>`;});
+const sx=pts[23][0];
+g+=`<path d="M${sx-46} 520 Q${sx} 515 ${sx+46} 520 L${sx+10} 585 Q${sx} 592 ${sx-10} 585Z" fill="url(#v)"/>`;
+g+=`<path d="M${sx-60} 525 C${sx-160} 500 ${sx-170} 590 ${sx-120} 600" stroke="#cfe8da" stroke-width="16" fill="none" stroke-linecap="round" opacity=".8"/><path d="M${sx+60} 525 C${sx+160} 500 ${sx+170} 590 ${sx+120} 600" stroke="#cfe8da" stroke-width="16" fill="none" stroke-linecap="round" opacity=".8"/>`;
+[[pts[3],'#c8f169'],[pts[20],'#c8f169']].forEach(([p])=>{g+=`<circle class="pulse" cx="${p[0]}" cy="${p[1]}" r="46" fill="url(#h)"/><circle cx="${p[0]}" cy="${p[1]}" r="7" fill="#c8f169" stroke="#0d3b2c" stroke-width="3"/>`;});
+s.innerHTML=g;
+
+const f=document.getElementById('f');
+f.addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block';});
+document.getElementById('mapbtn').addEventListener('click',e=>{e.target.parentElement.textContent='Nel sito definitivo qui comparirà la mappa di Google con il percorso per lo studio.';});
+}
+</script>
+</body>
+</html>
